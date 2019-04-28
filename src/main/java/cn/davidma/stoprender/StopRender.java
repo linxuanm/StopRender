@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
+import net.minecraft.tileentity.TileEntityEnderChest;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -40,9 +41,9 @@ public class StopRender {
 	}
 	
 	private static void unbindTESR(Class<?> tileClass) {
-		logger.info(String.format("Removing TESR for %s.", tileClass.toString()));
+		logger.debug(String.format("Removing TESR for %s.", tileClass.toString()));
 		TileEntitySpecialRenderer renderer = TileEntityRendererDispatcher.instance.renderers.get(tileClass);
-		TileEntityRendererDispatcher.instance.renderers.remove(tileClass, renderer);
+		TileEntityRendererDispatcher.instance.renderers.remove(tileClass);
 		renderer.setRendererDispatcher(null);
 	}
 }
