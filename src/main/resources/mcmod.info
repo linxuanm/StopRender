@@ -1,16 +1,12 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "modid": "stoprender",
+  "name": "Stop Render",
+  "description": "Adds a config to disable the tile entity special renderer of some tile entities.",
+  "version": "$1.0.0",
+  "mcversion": "1.12.2",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
+  "authorList": ["David Ma"],
 }
 ]
